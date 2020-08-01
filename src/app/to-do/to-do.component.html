@@ -1,0 +1,31 @@
+
+
+   
+    
+<div class="container">
+   <form> 
+      <div class="form-group"> 
+       <h1 class="text-center text-primary">Todo App</h1>  
+         <div class="input-group-prepend">       
+           <input #todo type="text" class="form-control" placeholder="Add Todo" name="todo" ngmodel>    
+             <button class=" btn btn-primary" (click)="AddTodoItem(todo)" ><i class="material-icons">add</i></button>  
+         </div>  
+      </div> 
+    </form>
+   <p>{{todo.value}}</p>
+   <div class="data"> 
+      <ul class="list-instyled">  
+         <li #index *ngFor="let todo of todoArray ;index as i" 
+          class="list-group-item d-flexjustify-content-between align-items-center">{{todo}}
+         <button class=" btn btn-default " (click)="Edititem(i)"><i class="material-icons">edit</i></button> 
+         <button class=" btn btn-warning pull-right" (click)="DeleteTodoItem(i)"><i class="material-icons">delete</i></button> 
+         </li>  
+      </ul>  
+    </div>
+ </div>
+   
+ <!-- <p class="background">
+   Some text.
+</p> -->
+
+ 
